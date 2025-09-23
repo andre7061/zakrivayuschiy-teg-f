@@ -13,4 +13,36 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font, sans-serif);
+  font-weight: var(--main-font-weight, 410);
+  background-image: var(--main-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  padding-top: 97px;
+  font-family: var(--accent-font);
+  text-align: center;
+}
+
+.container {
+  max-inline-size: var(--block-width);
+  margin: 0 auto;
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  margin-bottom: 20px;
+}
+
+.header__subtitle {
+  text-transform: uppercase;
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+}
+
+.header__wrapper {
+  background-color: var(--color-primary);
+ padding-block: clamp(122px, calc(110.462px + 3.077vw), 132px);
+ border: 2px solid var(--color-secondary, rgba(0, 0, 0, 1));
 }
