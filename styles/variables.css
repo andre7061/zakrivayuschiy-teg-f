@@ -11,7 +11,9 @@
     ),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
-  --block-width: clamp(375px, calc(260.563px + 30.516vw), 700px);
+  --block-width: clamp(375px, calc(260.56px + 30.5164vw), 700px);
   --color-primary: rgba(255, 255, 255, 1);
   --color-secondary: rgba(0, 0, 0, 1);
+  --border-default: 2px solid var(--color-secondary, #000);
+  --text-base: 18px;
 }
