@@ -9,6 +9,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+@import url(./animations.css);
 
 .page {
   min-inline-size: 320px;
@@ -81,11 +82,11 @@
 .card__container-img {
   height: 100%;
   position: relative;
-  max-height: 696px;
-  min-height: 371px;
 }
 
 .card__images {
+  max-height: 696px;
+  min-height: 371px;
   display: block;
   width: 100%;
   height: 100%;
@@ -107,6 +108,7 @@
   background-color: var(--color-primary);
   padding: 25px;
   padding-top: 27px;
+
   line-height: 21px;
   display: flex;
   flex-direction: column;
@@ -118,16 +120,27 @@
   align-self: flex-end;
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
 .card__icon-button {
+  height: 38px;
   background-color: transparent;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border 0.3s ease;
+  padding: 0;
+  margin-right: 5px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--color-secondary);
 }
 
 .card__like-button {
@@ -138,6 +151,15 @@
   font-family: var(--accent-font);
   font-size: 14px;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__like-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--color-secondary);
+  transition: box-shadow 0.3s ease;
 }
 
 .list {
@@ -175,24 +197,136 @@
 }
 
 .button {
-  max-width: 335px;
-  padding: 20px;
+  padding: 17px 20px;
   background-color: var(--color-primary);
   margin: 50px auto 0;
-  display: block;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 306px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
 }
 
-.button__svg {
-  width: 28px;
-  height: 28px;
+.button::after,
+.card__like-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 4;
+  mix-blend-mode: difference;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--color-secondary);
+}
+
+.button:hover.button::after,
+.card__like-button:hover.card__like-button::after {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.button svg {
+  inline-size: 21px;
+  block-size: 21px;
+  object-fit: cover;
+}
+.button__text {
+  line-height: 0.9;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: 400;
+}
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  /* opacity: 0; */
+  transition: fill 0.1s linear;
+}
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup::backdrop {
+  background: linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  opacity: 0.9;
+}
+
+.popup__container {
+  max-width: 353px;
+  background-color: var(--color-primary);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 17px 0;
+}
+
+.popup__header svg {
+  width: 39px;
+  height: 39px;
+  object-fit: cover;
+  flex-shrink: 22;
+}
+
+.popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup__text {
+  font-size: 14px;
+  font-family: var(--accent-font);
+  line-height: 1.5;
+  max-width: 234px;
+  flex-shrink: 2;
+}
+
+.popup__container .button {
+  text-transform: uppercase;
+  justify-content: center;
 }
 
 @media (width <= 375px) {
   .main {
     margin-top: 100px;
   }
+  .card__footer {
+    padding-top: 27px;
+  }
 
   .card__container-img {
     height: 371px;
+  }
+
+  .button {
+    gap: 13px;
+    flex-direction: column;
+  }
+
+  .button svg {
+    transform: scale(1.33);
   }
 }

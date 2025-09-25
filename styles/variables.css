@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --main-font: "Inter", sans-serif;
-  --accent-font: "Press Start 2P", fantasy;
+  --main-font: 'Inter', sans-serif;
+  --accent-font: 'Press Start 2P', fantasy;
   --main-font-weight: 410;
   --title-font-weight: 715;
   --main-gradient: repeating-linear-gradient(
@@ -16,4 +16,6 @@
   --color-secondary: rgba(0, 0, 0, 1);
   --border-default: 2px solid var(--color-secondary, #000);
   --text-base: 18px;
+  --contour-color: #ff0000;
+  --animation-fill-color: red;
 }
