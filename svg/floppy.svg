@@ -1,5 +1,5 @@
 
-<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
   <symbol id="edit" viewBox="0 0 21 21">
     <rect x="1" y="1" width="19" height="19" fill="black"/>
     <rect x="3" y="3" width="15" height="15" fill="white"/>
@@ -7,17 +7,8 @@
     <rect x="5" y="14" width="11" height="3" fill="black"/>
     <rect x="7" y="14" width="7" height="1" fill="white"/>
   </symbol>
-</svg> -->
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
-  <symbol id="edit" viewBox="0 0 21 21">
-    <!-- Простая иконка дискеты -->
-    <rect x="2" y="2" width="15" height="17" fill="#1a73e8" stroke="#000" stroke-width="0.5"/>
-    <rect x="4" y="4" width="11" height="8" fill="#fff"/>
-    <rect x="4" y="14" width="11" height="3" fill="#fff"/>
-    <rect x="7" y="14" width="2" height="3" fill="#1a73e8"/>
-  </symbol>
 </svg>
+
 
 
 

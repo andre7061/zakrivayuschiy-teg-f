@@ -108,7 +108,6 @@
   background-color: var(--color-primary);
   padding: 25px;
   padding-top: 27px;
-
   line-height: 21px;
   display: flex;
   flex-direction: column;
@@ -235,6 +234,7 @@
 }
 
 .button svg {
+  fill: var(--color-primary);
   inline-size: 21px;
   block-size: 21px;
   object-fit: cover;
