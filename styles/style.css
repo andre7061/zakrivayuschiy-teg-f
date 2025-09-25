@@ -289,7 +289,6 @@
 .popup__container {
   max-width: 353px;
   background-color: var(--color-primary);
-  padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -320,6 +319,7 @@
 .popup__container .button {
   text-transform: uppercase;
   justify-content: center;
+  max-width: 293px;
 }
 
 @media (width <= 375px) {
