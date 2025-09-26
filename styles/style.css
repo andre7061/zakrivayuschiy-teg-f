@@ -273,12 +273,6 @@
   padding: 30px;
 }
 
-.popup__header svg {
-  width: 39px;
-  height: 39px;
-  object-fit: cover;
-}
-
 .popup__header {
   display: flex;
   align-items: center;
